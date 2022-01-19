@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\build",
+    "\\build\\windows",
+    "\\deps",
+    "\\source",
+    "\\source\\plugins",
+    "\\source\\plugins\\AddSubtract"
+  ],
+  "SelectedNode": "\\build\\windows\\FFGLPlugins.sln",
+  "PreviewInSolutionExplorer": false
+}
