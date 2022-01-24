@@ -19,8 +19,6 @@ public:
 	char* GetTextParameter( unsigned int index ) override;
 
 	//parameters
-	//void Randomize();
-
 	int unreal_params_obj;
 	int object_option;
 	float object_t_x;				//!< In range between 0.0 .. 500.0		
@@ -41,9 +39,6 @@ public:
 	float object_s;					//!< In range between 0.0 .. 100.0
 	std::string max_scale;
 
-	//int b;
-	//char* amount[ 1 ];
-	ffglex::FFGLShader shader;  //!< Utility to help us compile and link some shaders into a program.
-	ffglex::FFGLScreenQuad quad;//!< Utility to help us render a full screen quad.
+	ffglex::FFGLShader shader;		//!< Utility to help us compile and link some shaders into a program.
+	ffglex::FFGLScreenQuad quad;	//!< Utility to help us render a full screen quad.
 };
-
