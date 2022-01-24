@@ -15,13 +15,13 @@ enum ParamID
 
 static CFFGLPluginInfo PluginInfo(
 	PluginFactory< CustomLight >,   // Create method
-	"FF66",								// Plugin unique ID of maximum length 4.
-	"Custom Light",				// Plugin name
-	2,									// API major version number
-	1,									// API minor version number
-	1,									// Plugin major version number
-	000,								// Plugin minor version number
-	FF_EFFECT,							// Plugin type
+	"FF66",							// Plugin unique ID of maximum length 4.
+	"Custom Light",					// Plugin name
+	2,								// API major version number
+	1,								// API minor version number
+	1,								// Plugin major version number
+	000,							// Plugin minor version number
+	FF_EFFECT,						// Plugin type
 	"Create custom lights",			// Plugin description
 	"Resolume FFGL custom lights"	// About
 );
@@ -43,6 +43,7 @@ CustomLight::CustomLight() :
 	outer_cone_angle( 0.0f )
 {
 	rgba[ 0 ] = rgba[ 1 ] = rgba[ 2 ] = rgba[ 3 ] = 1.0f;
+	
 	// Input properties
 	SetMinInputs( 0 );
 	SetMaxInputs( 0 );
