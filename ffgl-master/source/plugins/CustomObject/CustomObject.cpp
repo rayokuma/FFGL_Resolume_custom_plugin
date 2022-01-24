@@ -3,7 +3,6 @@ using namespace ffglex;
 
 enum ParamID
 {
-//	PID_RANDOMIZE,
 	PID_UNREAL_PARAMS_OBJECT,
 	PID_OBJECT_OPTION,
 	PID_OBJECT_T_X,
@@ -23,14 +22,14 @@ enum ParamID
 };
 
 static CFFGLPluginInfo PluginInfo(
-	PluginFactory< CustomObject >,   // Create method
-	"HH88",								// Plugin unique ID of maximum length 4.
+	PluginFactory< CustomObject >,  // Create method
+	"HH88",							// Plugin unique ID of maximum length 4.
 	"Custom Object",				// Plugin name
-	2,									// API major version number
-	1,									// API minor version number
-	1,									// Plugin major version number
-	000,								// Plugin minor version number
-	FF_EFFECT,							// Plugin type
+	2,								// API major version number
+	1,								// API minor version number
+	1,								// Plugin major version number
+	000,							// Plugin minor version number
+	FF_EFFECT,						// Plugin type
 	"Create custom object",			// Plugin description
 	"Resolume FFGL custom object"	// About
 );
@@ -69,6 +68,7 @@ CustomObject::CustomObject() :
 
 	//get Unreal Params
 	SetParamInfof( PID_UNREAL_PARAMS_OBJECT, "get initial unreal parameters", FF_TYPE_EVENT );
+
 	//object option
 	SetOptionParamInfo( PID_OBJECT_OPTION, "object_option", 3, object_option );
 	SetParamElementInfo( PID_OBJECT_OPTION, 0, "object 1", 0 );
@@ -91,6 +91,7 @@ CustomObject::CustomObject() :
 	SetParamInfo( PID_MAX_Y, "Y Max", FF_TYPE_TEXT, max_y.c_str() );
 	SetParamInfo( PID_MAX_Z, "Z Max", FF_TYPE_TEXT, max_z.c_str() );
 
+	//make group from minumum and maximum translation 
 	SetParamGroup( PID_MIN_X, "Translation Range" );
 	SetParamGroup( PID_MAX_X, "Translation Range" );
 	SetParamGroup( PID_MIN_Y, "Translation Range" );
@@ -109,7 +110,7 @@ CustomObject::CustomObject() :
 	//object scale
 	SetParamInfof( PID_OBJECT_S, "object_scale", FF_TYPE_STANDARD );
 	
-	// max scale
+	//max scale
 	SetParamInfo( PID_MAX_SCALE, "max_scale", FF_TYPE_TEXT, max_scale.c_str() );
 
 	FFGLLog::LogToHost( "Created Custom Object" );
@@ -188,10 +189,6 @@ FFResult CustomObject::SetFloatParameter( unsigned int dwIndex, float value )
 {
 	switch( dwIndex )
 	{
-//	case PID_RANDOMIZE:
-//		if( value != 0.0f )
-//			Randomize();//On button press we randomize our params so you can see how to change something and make the host pick it up.
-//		break;
 	case PID_UNREAL_PARAMS_OBJECT:
 		unreal_params_obj = static_cast< int >( value );
 		break;
@@ -201,7 +198,6 @@ FFResult CustomObject::SetFloatParameter( unsigned int dwIndex, float value )
 	case PID_OBJECT_T_X:
 		object_t_x = value * ( std::stof( max_x ) - std::stof(min_x)) + (std::stof(min_x));
 		break;
-	//		cam_focal_length = value * 119.0 + 1.0f; 
 	case PID_OBJECT_T_Y:
 		object_t_y = value * ( std::stof( max_y ) - std::stof( min_y ) ) + ( std::stof( min_y ) );
 		break;
@@ -220,8 +216,6 @@ FFResult CustomObject::SetFloatParameter( unsigned int dwIndex, float value )
 	case PID_OBJECT_S:
 		object_s = value * ( std::stof( max_scale ));
 		break;
-	//case PID_AMOUNT_OF:
-	//	amount_of[1] = value;
 
 	default:
 		return FF_FAIL;
@@ -278,7 +272,6 @@ float CustomObject::GetFloatParameter( unsigned int index )
 		return ( object_t_y - std::stof( min_y ) ) / ( std::stof( max_y ) - std::stof( min_y ) );
 	case PID_OBJECT_T_Z:
 		return ( object_t_z - std::stof( min_z ) ) / ( std::stof( max_z ) - std::stof( min_z) );
-	//		return ( cam_focal_length - 1.0f ) / 119.0f;
 	case PID_OBJECT_R_X:
 		return object_r_x;
 	case PID_OBJECT_R_Y:
@@ -287,8 +280,6 @@ float CustomObject::GetFloatParameter( unsigned int index )
 		return object_r_z;
 	case PID_OBJECT_S:
 		return ( object_s - 0.0f ) / std::stof( max_scale );
-	//case PID_AMOUNT_OF:
-	//	return amount_of;
 	}
 	return 0.0f;
 }
@@ -325,44 +316,3 @@ char* CustomObject::GetTextParameter( unsigned int index )
 
 	return textBufferForHost;
 }
-
-/*
-
-void CustomObject::Randomize()
-{
-	b = b + 1;
-	std::string test = "";
-	int thingies = 0;
-
-	for( int i = 0; i < b; i++ )
-	{
-		//test = std::string( "hey " ) + std::to_string( i );
-		test.append( std::string( "(" ) + std::to_string( i ) + std::string( "hey'), " ) );
-	}
-
-	FindParamInfo( PID_OBJECT_OPTION );
-	char* x = GetParamElementName(PID_OBJECT_OPTION, 1);
-
-	SetParamDisplayName( PID_OBJECT_OPTION, std::string( "Option " ) + std::string( x ), true );
-	//SetParamElements( PID_OBJECT_OPTION, std::vector< { std::string( "hello" ) } >, std::vector< {2} >&, true );
-	SetParamElements( PID_OBJECT_OPTION, std::vector< std::string >{ test }, std::vector< float >{ 0}, true );
-	//SetParamElementInfo( PID_OBJECT_OPTION, 1, x, 1 );
-	object_option = 1;
-	//object_option = static_cast< float >( rand() % 30 );
-
-		//object_option = static_cast< float >( rand() % 30 );
-
-	RaiseParamEvent( PID_OBJECT_OPTION, FF_EVENT_FLAG_ELEMENTS );
-	RaiseParamEvent( PID_OBJECT_OPTION, FF_EVENT_FLAG_DISPLAY_NAME );
-	RaiseParamEvent( PID_OBJECT_OPTION, FF_EVENT_FLAG_VISIBILITY );
-	RaiseParamEvent( PID_OBJECT_OPTION, FF_EVENT_FLAG_VALUE);
-
-	//SetParamElements( unsigned int dwIndex, std::vector< std::string > newElements, const std::vector< float >& elementValues, bool raiseEvent );
-
-
-	
-
-}
-
-
-*/
