@@ -21,15 +21,15 @@ enum ParamID
 };
 
 static CFFGLPluginInfo PluginInfo(
-	PluginFactory< CustomCameras >,  // Create method
-	"GG77",								// Plugin unique ID of maximum length 4.
+	PluginFactory< CustomCameras >, // Create method
+	"GG77",							// Plugin unique ID of maximum length 4.
 	"Custom Cameras",				// Plugin name
-	2,									// API major version number
-	1,									// API minor version number
-	1,									// Plugin major version number
-	000,								// Plugin minor version number
-	FF_EFFECT,							// Plugin type
-	"Create custom cameras",			// Plugin description
+	2,								// API major version number
+	1,								// API minor version number
+	1,								// Plugin major version number
+	000,							// Plugin minor version number
+	FF_EFFECT,						// Plugin type
+	"Create custom cameras",		// Plugin description
 	"Resolume FFGL custom cameras"	// About
 );
 
@@ -64,8 +64,7 @@ CustomCameras::CustomCameras() :
 	SetMaxInputs( 0 );
 
 	// Parameters
-
-	//get unreal params
+	//get unreal parameterss
 	SetParamInfof( PID_UNREAL_PARAMS_CAM, "get initial unreal parameters", FF_TYPE_EVENT );
 
 	//camera translation
@@ -83,6 +82,7 @@ CustomCameras::CustomCameras() :
 	SetParamInfo( PID_MAX_Y, "Y Max", FF_TYPE_TEXT, max_y.c_str() );
 	SetParamInfo( PID_MAX_Z, "Z Max", FF_TYPE_TEXT, max_z.c_str() );
 
+	//make group from minumum and maximum translation 
 	SetParamGroup( PID_MIN_X, "Translation Range" );
 	SetParamGroup( PID_MAX_X, "Translation Range" );
 	SetParamGroup( PID_MIN_Y, "Translation Range" );
@@ -98,14 +98,14 @@ CustomCameras::CustomCameras() :
 	SetParamInfof( PID_CAM_R_Z, "cam_r_Z", FF_TYPE_STANDARD );
 	SetParamRange( PID_CAM_R_Z, -180, 180 );
 
+	//rotate around object
 	SetParamInfof( PID_ROTATE_AROUND_OBJECT, "rotate_around_object", FF_TYPE_STANDARD );
 	SetParamRange( PID_ROTATE_AROUND_OBJECT, -180, 180 );
 
-
 	//camera lens settings
+	//focal length
 	SetParamInfof( PID_CAM_FOCAL_LENGTH, "cam_focal_length", FF_TYPE_STANDARD );
 
-	
 	FFGLLog::LogToHost( "Created Custom Parameters" );
 }
 
@@ -131,6 +131,7 @@ FFResult CustomCameras::ProcessOpenGL( ProcessOpenGLStruct* pGL )
 	//do nothing
 	return FF_SUCCESS;
 }
+
 FFResult CustomCameras::DeInitGL()
 {
 	shader.FreeGLResources();
