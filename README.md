@@ -1,7 +1,7 @@
 <img src="https://user-images.githubusercontent.com/53759287/150963688-497e5f63-fcb5-45e7-aa6b-9a6cc6d00623.png" width="400"><img src="https://user-images.githubusercontent.com/53759287/150963396-02407643-f98e-40a3-aff2-6a483e5a97e7.png" width="400"> <img src="https://user-images.githubusercontent.com/53759287/150963471-7c3f3872-5cb7-48b4-b39b-daf88c0ddb40.png" width="400"> <img src="https://user-images.githubusercontent.com/53759287/150963574-55bca4cf-08d7-4f70-89aa-082408ca4891.png" width="400"> 
 
 
-Contains four user interface plug-ins aimed for Resolume. These plug-ins are customizable and give an idea of the possibilities for making a UI for Resolume.
+This repository contains four user interface plug-ins aimed for Resolume. These plug-ins are customizable and give an idea of the possibilities for making a UI for Resolume.
 It is up to date and has Visual Studio and Xcode projects to compile 64 bit plugins that can be loaded by Resolume 7.0.3 and up.
 The package contains Resolume's master branch to be found [here](https://github.com/resolume/ffgl)
 
