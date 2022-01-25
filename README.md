@@ -10,6 +10,7 @@ Also more examples are available on this [repo](https://github.com/flyingrub/ffg
 
 ## Usage
 To simply use one of the plug-ins, copy the desired plug-in (.dll file) into **(Resolume dir)/plugins/vfx** folder, or point to the folder on your pc in the **video** section in Resolume's preference window. Resolume will load in the plug-in file in the effects panel. 
+<img src="https://user-images.githubusercontent.com/53759287/150970116-141d55e1-948c-48ed-9926-3ef36631fcb8.png" width="400"> 
 
 ## Customizing the plug-in
 The project requires to be rebuilt, if it is desired to customize the plug-in(s).
@@ -34,10 +35,11 @@ This plug-in can be used to control Unreal Engine parameters via Resolume.
 To attain this, you will need [these blueprints](https://blueprintue.com/blueprint/bbi09fgf/), and the [Off World Live Spout plug-in](https://plugin-auth.offworld.live/) for this.
 
 - In resolume, make sure you are receiving and sending OSC data. Check the preference window > OSC. The settings should look like the following.
-<img src="https://user-images.githubusercontent.com/53759287/150968637-c92715c7-bdb3-4000-9fa0-4775b44954d3" width="250"> 
+-
+<img src="https://user-images.githubusercontent.com/53759287/150970306-cc50a477-453f-44b6-b939-6358a6c28c76.png" width="250"> 
 - In unreal, make a new blueprint class and paste [these blueprints](https://blueprintue.com/blueprint/bbi09fgf/) inside. This blueprint is fully customizable as well. However, it should correspond with your plug-in.
 - Put the Off world camera in the scene.
-- 
+
 <img src="https://user-images.githubusercontent.com/53759287/150969612-e06020b1-177f-4efe-a77e-8b89422189bb.png" width="400"> 
 - Assign the required actors 
 
