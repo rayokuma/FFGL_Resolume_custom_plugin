@@ -9,10 +9,11 @@ You can find some help to get started with FFGL plugin development on the [wiki]
 Also more examples are available on this [repo](https://github.com/flyingrub/ffgl/tree/more/).
 
 ## Usage
+## Using the plug-in(s) in Resolume
 To simply use one of the plug-ins, copy the desired plug-in (.dll file) into **(Resolume dir)/plugins/vfx** folder, or point to the folder on your pc in the **video** section in Resolume's preference window. Resolume will load in the plug-in file in the effects panel. 
 <img src="https://user-images.githubusercontent.com/53759287/150970116-141d55e1-948c-48ed-9926-3ef36631fcb8.png" width="400"> 
 
-## Customizing the plug-in
+### Customizing the plug-in
 The project requires to be rebuilt, if it is desired to customize the plug-in(s).
 To do this, the FFGL SDK plug-in needs to be installed, as well as Microsoft Visual Studio (I used [Community Edition 2019](https://my.visualstudio.com/Downloads?q=visual%20studio%202019&wt.mc_id=o~msft~vscom~older-downloads)). 
 
@@ -30,7 +31,7 @@ To do this, the FFGL SDK plug-in needs to be installed, as well as Microsoft Vis
 - Right-click the project and select Build.
 - After building, find the resulting `.dll` file in `\binaries\x64\Debug`. Copy it to `<user folder>/Documents/Resolume/Extra Effects`. It can now be employed in Resolume.
 
-### Combination with Unreal Engine
+## Combination with Unreal Engine
 This plug-in can be used to control Unreal Engine parameters via Resolume.
 To attain this, you will need [these blueprints](https://blueprintue.com/blueprint/bbi09fgf/), and the [Off World Live Spout plug-in](https://plugin-auth.offworld.live/) for this.
 
