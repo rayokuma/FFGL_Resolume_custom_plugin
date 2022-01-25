@@ -9,7 +9,7 @@ You can find some help to get started with FFGL plugin development on the [wiki]
 Also more examples are available on this [repo](https://github.com/flyingrub/ffgl/tree/more/).
 
 ## Usage
-## Using the plug-in(s) in Resolume
+### Using the plug-in(s) in Resolume
 To simply use one of the plug-ins, copy the desired plug-in (.dll file) into **(Resolume dir)/plugins/vfx** folder, or point to the folder on your pc in the **video** section in Resolume's preference window. Resolume will load in the plug-in file in the effects panel. 
 <img src="https://user-images.githubusercontent.com/53759287/150970116-141d55e1-948c-48ed-9926-3ef36631fcb8.png" width="400"> 
 
