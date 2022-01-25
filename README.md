@@ -38,7 +38,7 @@ To attain this, you will need [these blueprints](https://blueprintue.com/bluepri
 
 ### Workflow
 Check out this [paper]() for a more extensive explanation on employing Unreal Engine for VJ and stage-production utilizing this code.
-Following is a very basic explanation.
+Following is a very basic descripton of the workflow.
 
 - In resolume, make sure you are receiving and sending OSC data. Check the preference window > OSC. The settings should look like the following.
 <img src="https://user-images.githubusercontent.com/53759287/150970306-cc50a477-453f-44b6-b939-6358a6c28c76.png" width="400"> 
