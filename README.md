@@ -17,7 +17,7 @@ The project requires to be rebuilt, if it is desired to customize the plug-in(s)
 To do this, the FFGL SDK plug-in needs to be installed, as well as Microsoft Visual Studio (I used [Community Edition 2019](https://my.visualstudio.com/Downloads?q=visual%20studio%202019&wt.mc_id=o~msft~vscom~older-downloads)). 
 
 Consequently, open the folder in Visual Studio, dive is the FFGLPlugins.sln file, and adjust the code in the .cpp and .h file of the desired plug-in. 
-Once satisfied, right-click the folder and click 'build'. The new .dll file should now be present in **binaries/x64/Debug**, and can be employed in Resolume.
+Once satisfied, right-click the folder and click 'build'. The new .dll file should now be present in 'binaries/x64/Debug', and can be employed in Resolume.
 
 
 ### Adding a new plug-in
