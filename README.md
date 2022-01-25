@@ -15,16 +15,34 @@ To simply use one of the plug-ins, copy the desired plug-in (.dll file) into **(
 The project requires to be rebuilt, if it is desired to customize the plug-in(s).
 To do this, the FFGL SDK plug-in needs to be installed, as well as Microsoft Visual Studio (I used [Community Edition 2019](https://my.visualstudio.com/Downloads?q=visual%20studio%202019&wt.mc_id=o~msft~vscom~older-downloads)). 
 
-Consequently, open the folder in Visual Studio, dive in `FFGLPlugins.sln`, and adjust the code in the `.cpp` and `.h` file of the desired plug-in. 
-Once satisfied, right-click the folder and click 'build'. The new .dll file should now be present in `binaries/x64/Debug`, and can be employed in Resolume.
+- Open the folder in Visual Studio, dive in `FFGLPlugins.sln`.
+- Adjust the code in the `.cpp` and `.h` file of the desired plug-in. 
+- Right-click the folder and click 'build'. The new `.dll` file should now be present in `binaries/x64/Debug`, Copy it to `<user folder>/Documents/Resolume/Extra Effects`.
 
 
 ### Adding a new plug-in
-- Go to `<repo>/build/windows`, duplicate a `.vcxproj` and the corresponding `.vcxproj.filters` file, and rename them.
-- Open `FFGLPlugins.sln`. Then right-click the Solution in the solution explorer (top of the tree), and choose Add > Existing Project and select the new file.
-- Remove the original `.cpp` and `.h` source files from the newly added project, i.e. if you duplicated `Gradient.vcxproj`, remove `FFGLGradients.h` and `FFGLGradients.cpp`
+- In`<repo>/build/windows`, duplicate a `.vcxproj` and the corresponding `.vcxproj.filters` file, and rename them.
+- Open `FFGLPlugins.sln`. Then right-click the Solution in the solution explorer, and choose Add > Existing Project and select the new file.
+- Remove the original `.cpp` and `.h` source files from the newly added project.
 - In Explorer, go to `<repo>/source/`, duplicate a plugin folder and rename the files. Choose a corresponding plugin type, i.e. copy `AddSubtract` if you want to build an Effect plugin or `Gradients` if you want to build a Source plugin.
 - Add the new source files to the project by dragging them into Visual Studio, onto your new project.
-- If you want to start the build with Visual Studio's Build command (F5), right-click the project and select Set as Startup Project. Altenatively, you can right-click the project and select Build.
-- After building, find the resulting `.dll` file in `\binaries\x64\Debug`. Copy it to `<user folder>/Documents/Resolume/Extra Effects`
+- Right-click the project and select Build.
+- After building, find the resulting `.dll` file in `\binaries\x64\Debug`. Copy it to `<user folder>/Documents/Resolume/Extra Effects`. It can now be employed in Resolume.
+
+### Combination with Unreal Engine
+This plug-in can be used to control Unreal Engine parameters via Resolume.
+To attain this, you will need [these blueprints](https://blueprintue.com/blueprint/bbi09fgf/), and the [Off World Live Spout plug-in](https://plugin-auth.offworld.live/) for this.
+
+- In resolume, make sure you are receiving and sending OSC data. Check the preference window > OSC. The settings should look like the following.
+![image](https://user-images.githubusercontent.com/53759287/150968637-c92715c7-bdb3-4000-9fa0-4775b44954d3.png)
+- In unreal, make a new blueprint class and paste [these blueprints](https://blueprintue.com/blueprint/bbi09fgf/) inside. This blueprint is fully customizable as well. However, it should correspond with your plug-in.
+- Put the Off world camera in the scene.
+<img src="https://user-images.githubusercontent.com/53759287/150969612-e06020b1-177f-4efe-a77e-8b89422189bb.png" width="250"> 
+- Assign the required actors 
+
+- When clicking on play, data should be coming in in Unreal Engine
+<img src="https://user-images.githubusercontent.com/53759287/150969075-ed916c02-b277-4218-aeed-b49a63316484.png" width="250"> 
+- In Resolume, you are now streaming Unreal's camera output, while you can operate its parameters, like light, camera, actor transformations, materials, and more!
+<img src="https://user-images.githubusercontent.com/53759287/150969758-e405d360-020c-445d-b469-6c5a66f7d7d7.png" width="250">
+
 
