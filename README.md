@@ -1,3 +1,5 @@
+![image](https://user-images.githubusercontent.com/53759287/150963396-02407643-f98e-40a3-aff2-6a483e5a97e7.png)
+
 A custom plug-in based on the Resolume fork of the FFGL repository. 
 It is up to date and has Visual Studio and Xcode projects to compile 64 bit plugins that can be loaded by Resolume 7.0.3 and up.
 
