@@ -35,7 +35,7 @@ This plug-in can be used to control Unreal Engine parameters via Resolume.
 To attain this, you will need [these blueprints](https://blueprintue.com/blueprint/bbi09fgf/), and the [Off World Live Spout plug-in](https://plugin-auth.offworld.live/) for this.
 
 - In resolume, make sure you are receiving and sending OSC data. Check the preference window > OSC. The settings should look like the following.
-<img src="https://user-images.githubusercontent.com/53759287/150970306-cc50a477-453f-44b6-b939-6358a6c28c76.png" width="500"> 
+<img src="https://user-images.githubusercontent.com/53759287/150970306-cc50a477-453f-44b6-b939-6358a6c28c76.png" width="400"> 
 - In unreal, make a new blueprint class and paste [these blueprints](https://blueprintue.com/blueprint/bbi09fgf/) inside. This blueprint is fully customizable as well. However, it should correspond with your plug-in.
 - Put the Off world camera in the scene.
 
