@@ -33,7 +33,7 @@ To do this, the FFGL SDK plug-in needs to be installed, as well as Microsoft Vis
 
 ## Combination with Unreal Engine
 ### Requirements
-This plug-in can be used to control Unreal Engine parameters via Resolume.
+This plug-in can be used to control Unreal Engine 4.27 parameters via Resolume.
 To attain this, you will need [these blueprints](https://blueprintue.com/blueprint/bbi09fgf/), and the [Off World Live Spout plug-in](https://plugin-auth.offworld.live/) for this.
 
 ### Workflow
@@ -43,6 +43,7 @@ To attain this, you will need [these blueprints](https://blueprintue.com/bluepri
 - Put the Off world camera in the scene.
 <img src="https://user-images.githubusercontent.com/53759287/150969612-e06020b1-177f-4efe-a77e-8b89422189bb.png" width="500"> 
 - Assign the required actors 
+<img src = "https://user-images.githubusercontent.com/53759287/150971469-67121c32-ef1b-4bf6-919d-d6a393849a40.png" width ="500">
 - When clicking on play, data should be coming in in Unreal Engine
 <img src="https://user-images.githubusercontent.com/53759287/150969075-ed916c02-b277-4218-aeed-b49a63316484.png" width="500"> 
 
