@@ -29,3 +29,4 @@ Once satisfied, right-click the folder and click 'build'. The new .dll file shou
 - If you want to start the build with Visual Studio's Build command (F5), right-click the project and select Set as Startup Project. Altenatively, you can right-click the project and select Build.
 - After building, find the resulting `.dll` file in `\binaries\x64\Debug`. Copy it to `<user folder>/Documents/Resolume/Extra Effects`
 
+<iframe src="https://blueprintue.com/render/bbi09fgf/" scrolling="no" allowfullscreen></iframe>
