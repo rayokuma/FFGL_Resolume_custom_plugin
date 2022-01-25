@@ -2,24 +2,22 @@
 
 
 
-A custom plug-in based on the Resolume fork of the FFGL repository. 
+Contains four user interface plug-ins aimed for Resolume. These plug-ins are customizable and give an idea of the possibilities for making a UI for Resolume.
 It is up to date and has Visual Studio and Xcode projects to compile 64 bit plugins that can be loaded by Resolume 7.0.3 and up.
+The package contains Resolume's master branch to be found [here](https://github.com/resolume/ffgl)
 
 You can find some help to get started with FFGL plugin development on the [wiki](https://github.com/resolume/ffgl/wiki).
-
 Also more examples are available on this [repo](https://github.com/flyingrub/ffgl/tree/more/).
 
-## Master branch changes since FFGL 2.2
-- Replaced glload by glew, enabling OpenGL 4.6 extensions to be used inside plugins. Plugins may need to add deps/glew.props to their project's property pages for them to link to the binary.
-- Implemented parameter display names. Parameter names are used as identification during serialization, display names can be used to override the name that is shown in the ui. The display name can also be changed dynamically by raising a display name changed event. (Requires Resolume 7.4.0 and up)
-- Implemented value change events. Plugins can change their own parameter values and make the host pick up the change. See the new Events example on how to do this. (Requires Resolume 7.4.0 and up)
-- Implemented dynamic option elements. Plugins can add/remove/rename option elements on the fly. (Requires Resolume 7.4.1 and up)
+## Usage
+To simply use one of the plug-ins, copy the desired plug-in (.dll file) into **(Resolume dir)/plugins/vfx** folder, or point to the folder on your pc in the **video** section in Resolume's preference window. Resolume will load in the plug-in file in the effects panel. 
 
-*You can suggest a change by creating an issue. In the issue describe the problem that has to be solved and if you want, a suggestion on how it could be solved.*
+## Customizing the plug-in
 
-## Quickstart
+If you want to customize the plug-in, the FFGL SDK plug-in needs to be installed, as well as Microsoft Visual Studio (I used [Community Edition 2019]()). 
 
-Below are the first steps you need to create and test an FFGL plugin for Resolume. This assumes you have experience with git and C++ development.
+If you want to customize parameter names you will have to install the FFGL SDK and rebuild the project. 
+
 
 ### Windows 
 
