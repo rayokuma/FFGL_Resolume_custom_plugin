@@ -56,3 +56,6 @@ Following is a basic description of the workflow.
 - In Resolume, you are now streaming Unreal's camera output, while you can operate its parameters, like light, camera, actor transformations, materials, and more!
 <img src="https://user-images.githubusercontent.com/53759287/150969758-e405d360-020c-445d-b469-6c5a66f7d7d7.png" width="500">
 
+
+https://user-images.githubusercontent.com/53759287/150975771-f467cace-534f-484a-91bf-bf6614389517.mp4
+
