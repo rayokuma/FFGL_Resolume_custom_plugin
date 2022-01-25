@@ -46,7 +46,6 @@ To attain this, you will need [these blueprints](https://blueprintue.com/bluepri
 <img src = "https://user-images.githubusercontent.com/53759287/150971469-67121c32-ef1b-4bf6-919d-d6a393849a40.png" width ="500">
 - When clicking on play, data should be coming in in Unreal Engine
 <img src="https://user-images.githubusercontent.com/53759287/150969075-ed916c02-b277-4218-aeed-b49a63316484.png" width="500"> 
-
 - In Resolume, you are now streaming Unreal's camera output, while you can operate its parameters, like light, camera, actor transformations, materials, and more!
 <img src="https://user-images.githubusercontent.com/53759287/150969758-e405d360-020c-445d-b469-6c5a66f7d7d7.png" width="500">
 
