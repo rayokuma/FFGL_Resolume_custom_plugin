@@ -33,7 +33,7 @@ To do this, the FFGL SDK plug-in needs to be installed, as well as Microsoft Vis
 ## Combination with Unreal Engine
 ### Requirements
 This plug-in can be used to control Unreal Engine 4.27 parameters via Resolume.
-To attain this, you will need [these blueprints](https://blueprintue.com/blueprint/bbi09fgf/), and the [Off World Live Spout plug-in](https://plugin-auth.offworld.live/) for this.
+To attain this, you will need [these blueprints](https://blueprintue.com/blueprint/bbi09fgf/), and the [Off World Live Spout plug-in](https://plugin-auth.offworld.live/).
 
 ### Workflow
 Check out this [paper]() for a more extensive explanation on employing Unreal Engine for VJ and stage-production utilizing this code.
