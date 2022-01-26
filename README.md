@@ -33,10 +33,10 @@ To do this, the FFGL SDK plug-in needs to be installed, as well as Microsoft Vis
 ## Combination with Unreal Engine
 ### Requirements
 This plug-in can be used to control Unreal Engine 4.27 parameters via Resolume.
-To attain this, you will need [these blueprints](https://blueprintue.com/blueprint/bbi09fgf/), and the [Off World Live Spout plug-in](https://plugin-auth.offworld.live/).
+To attain this, you will need [these blueprints](https://blueprintue.com/blueprint/bbi09fgf/) and the [Off World Live Spout plug-in](https://plugin-auth.offworld.live/).
 
 ### Workflow
-Check out this [paper]() for a more extensive explanation on employing Unreal Engine for VJ and stage-production utilizing this code.
+Check out this [paper]() for a more extensive explanation of employing Unreal Engine for VJ and stage-production utilizing this code.
 Following is a basic description of the workflow.
 
 - In Resolume, make sure you are receiving and sending OSC data. Check the preference window > OSC. The settings should look like the following.
@@ -50,7 +50,7 @@ Following is a basic description of the workflow.
 - Assign the required actors 
 <img src = "https://user-images.githubusercontent.com/53759287/150971469-67121c32-ef1b-4bf6-919d-d6a393849a40.png" width ="500">
 
-- When clicking on play, data should be coming in in Unreal Engine
+- When clicking on play, data should be coming in Unreal Engine
 <img src="https://user-images.githubusercontent.com/53759287/150969075-ed916c02-b277-4218-aeed-b49a63316484.png" width="500"> 
 
 - In Resolume, you are now streaming Unreal's camera output, while you can operate its parameters, like light, camera, actor transformations, materials, and more!
